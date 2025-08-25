@@ -230,7 +230,7 @@ body:not(.index-page) .header {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navmenu {
     padding: 0;
   }
@@ -259,6 +259,15 @@ body:not(.index-page) .header {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+  }
+
+  /* Responsive font and padding for tablet */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .navmenu a,
+    .navmenu a:focus {
+      padding: 15px 10px;
+      font-size: 14px;
+    }
   }
 
   .navmenu a i,
@@ -299,6 +308,13 @@ body:not(.index-page) .header {
     min-width: 200px;
   }
 
+  /* Responsive dropdown width for tablet */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .navmenu .dropdown ul li {
+      min-width: 180px;
+    }
+  }
+
   .navmenu .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
@@ -322,20 +338,19 @@ body:not(.index-page) .header {
     visibility: visible;
   }
 
-/* Deep dropdown arah ke kanan */
-.navmenu .dropdown .dropdown ul {
-  top: 0;
-  left: 100%;   /* sebelumnya -90% */
-  visibility: hidden;
-}
+  /* Deep dropdown arah ke kanan */
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: 100%;
+    visibility: hidden;
+  }
 
-.navmenu .dropdown .dropdown:hover>ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;   /* sebelumnya -100% */
-  visibility: visible;
-}
-
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
 
   .navmenu .megamenu {
     position: static;
@@ -380,10 +395,31 @@ body:not(.index-page) .header {
     top: 100%;
     visibility: visible;
   }
+
+  /* Custom Button styling for tablet */
+  .navmenu .custom-button-dropdown > a.custom-button {
+    background-color: #55813a;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 32px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .navmenu .custom-button-dropdown > a.custom-button {
+      padding: 6px 16px;
+      font-size: 13px;
+    }
+  }
 }
 
-/* Mobile Navigation */
-@media (max-width: 1199px) {
+/* Mobile Navigation - Only for screens smaller than 768px */
+@media (max-width: 767px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -506,82 +542,30 @@ body:not(.index-page) .header {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
-}
 
-
-/* ============================================
-   Tambahan: Dropdown Button Custom (Hubungi Kami)
-=============================================== */
-.navmenu .custom-button-dropdown {
-  position: relative;
-  margin-left: 15px;
-}
-
-.navmenu .custom-button-dropdown > a.custom-button {
-  background-color: #55813a; /* Warna dari palet Prama */
-  color: #fff;
-  padding: 10px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 32px;
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-}
-
-.navmenu .custom-button-dropdown > a.custom-button:hover {
-  background-color: #44672f;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Dropdown Menu khusus tombol */
-.navmenu .custom-button-dropdown ul {
-  margin: 0;
-  padding: 8px 0;
-  background: #fff;
-  border-radius: 6px;
-  display: none;
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0; /* memastikan dropdown sejajar kiri tombol */
-  min-width: 180px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-
-.navmenu .custom-button-dropdown:hover ul {
-  display: block;
-}
-
-.navmenu .custom-button-dropdown ul li a {
-  padding: 10px 16px;
-  font-size: 14px;
-  color: #1d4768;
-  display: block;
-  white-space: nowrap;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.navmenu .custom-button-dropdown ul li a:hover {
-  background-color: #f2f2f2;
-}
-
-/* Pastikan tidak rusak saat diresponsif */
-@media (max-width: 1199px) {
+  /* Custom button dropdown untuk mobile */
   .navmenu .custom-button-dropdown > a.custom-button {
     padding: 12px 20px;
     display: block;
     width: 100%;
     border-radius: 6px;
+    background-color: #55813a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
   }
 
   .navmenu .custom-button-dropdown ul {
     position: static;
     min-width: 100%;
     box-shadow: none;
+  }
+}
+
+/* Hide mobile toggle on tablet and desktop */
+@media (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none !important;
   }
 }
 
@@ -1546,7 +1530,9 @@ section,
   gap: 6px;
   font-size: 0.95rem;
   margin-bottom: 8px;
+  padding-right: 70px; /* Biar tidak nabrak status */
 }
+
 
 .schedule-cards .start-date {
   font-weight: 600;
