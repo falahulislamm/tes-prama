@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Prama Consulting & Training</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo prama nobg.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+<!-- Swiper CSS (Pastikan versinya match dengan JS) -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="assets/js/clients-carousel.js" defer></script>
+
+</head>
+
+<body class="index-page">
+
+  <!-- Header -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/logo prama nobg.png" alt="">
+      <h1 class="sitename">Prama Daksa Infotama</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="about.html">Profil Perusahaan</a></li>
+            <li><a href="trainer.html">Trainer</a></li>
+            <li><a href="client.html">Klien</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><span>Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <!-- Deep Dropdown -->
+            <li class="dropdown">
+              <a href="#"><span>Program</span> <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="konsultasi.html">Konsultasi</a></li>
+                <li><a href="pelatihan.html">Pelatihan</a></li>
+              </ul>
+            </li>
+            <li><a href="jadwal.html">Jadwal</a></li>
+          </ul>
+        </li>
+
+        <li><a href="gallery.html">Dokumentasi</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+
+        <li><a href="contact.html" class="custom-button">Hubungi Kami</a></li>
+      </ul>
+
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <div class="carousel-item active">
+      <img src="assets/img/hero-carousel/herocarousel.jpg" alt="Pelatihan SDM dan Konsultasi Manajemen">
+      <div class="carousel-container">
+        <h2>Jasa Pelatihan SDM dan Konsultasi Bisnis Profesional</h2>
+        <p>Kami membantu perusahaan meningkatkan kompetensi karyawan dan kepatuhan terhadap regulasi dengan solusi yang efektif.</p>
+        <a href="#about" class="btn-get-started">Pelajari Layanan Kami</a>
+      </div>
+    </div><!-- End Carousel Item -->
+
+    <div class="carousel-item">
+      <img src="assets/img/hero-carousel/herocarousel2.jpg" alt="Konsultan Perizinan Usaha dan HRD">
+      <div class="carousel-container">
+        <h2>Layanan Konsultan HRD & Perizinan Usaha Terpercaya</h2>
+        <p>Dapatkan dukungan profesional dalam manajemen SDM, legalitas bisnis, dan penyelesaian hubungan industrial.</p>
+        <a href="#program" class="btn-get-started">Lihat Program Unggulan</a>
+      </div>
+    </div><!-- End Carousel Item -->
+
+    <div class="carousel-item">
+      <img src="assets/img/hero-carousel/herocarousel3.jpg" alt="Prama Consulting & Training Indonesia">
+      <div class="carousel-container">
+        <h2>Prama Consulting & Training Indonesia</h2>
+        <p>Konsultan pengembangan SDM dan general affairs berbasis regulasi yang mendukung pertumbuhan berkelanjutan perusahaan Anda.</p>
+        <a href="#contact" class="btn-get-started">Hubungi Kami Sekarang</a>
+      </div>
+    </div><!-- End Carousel Item -->
+
+   <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+  <span class="bi bi-chevron-left" aria-hidden="true"></span>
+</a>
+
+<a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+  <span class="bi bi-chevron-right" aria-hidden="true"></span>
+</a>
+
+
+    <ol class="carousel-indicators"></ol>
+
+  </div>
+
+</section><!-- /Hero Section -->
+
+
+    <!-- 2. About Us -->
+<section id="about" class="about section">
+
+<!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Tentang Kami</h2>
+    <p>Konsultan Pelatihan & SDM yang Terpercaya dan Profesional</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-5">
+
+      <!-- Deskripsi Utama -->
+      <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+        <h3>PRAMA Consulting and Training</h3>
+        <p>
+          Di bawah naungan PT. Prama Daksa Infotama, kami fokus pada layanan Konsultasi dan Pelatihan di bidang
+          Sumber Daya Manusia (SDM), Manajemen Umum (General Affairs), Perizinan Usaha, PB-UMKU, K3L, Hukum Bisnis,
+          dan Penyelesaian Hubungan Industrial.
+        </p>
+        <p>
+          Dengan pendekatan berbasis regulasi dan efisiensi, kami hadir sebagai mitra strategis untuk mendorong
+          pertumbuhan berkelanjutan bisnis Anda.
+        </p>
+        <div class="d-flex">
+          <a href="about.html" class="btn-get-started">Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+
+      <!-- Layanan Ikon -->
+      <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4">
+
+          <div class="col-md-6 icon-box position-relative">
+            <i class="bi bi-graph-up-arrow"></i>
+            <h4><a class="stretched-link">Pertumbuhan Bisnis</a></h4>
+            <p>Solusi pelatihan yang mendorong pengembangan karyawan dan kinerja perusahaan.</p>
+          </div>
+
+          <div class="col-md-6 icon-box position-relative">
+            <i class="bi bi-lightbulb"></i>
+            <h4><a class="stretched-link">Solusi Inovatif</a></h4>
+            <p>Pendekatan adaptif dan berbasis kebutuhan spesifik tiap klien.</p>
+          </div>
+
+          <div class="col-md-6 icon-box position-relative">
+            <i class="bi bi-people"></i>
+            <h4><a class="stretched-link">Tim Profesional</a></h4>
+            <p>Didukung oleh trainer dan konsultan berpengalaman di bidangnya.</p>
+          </div>
+
+          <div class="col-md-6 icon-box position-relative">
+            <i class="bi bi-trophy"></i>
+            <h4><a class="stretched-link">Hasil Terbukti</a></h4>
+            <p>Ratusan perusahaan telah merasakan manfaat dari layanan kami.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section id="services" class="services section bg-light">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center mb-5">
+      <h2>Program Kami</h2>
+      <p>Kami menyediakan layanan konsultasi dan pelatihan untuk mendukung pengembangan SDM dan efisiensi manajemen perusahaan Anda.</p>
+    </div>
+
+    <div class="row justify-content-center gx-0">
+      <!-- Konsultasi -->
+      <div class="col-lg-5">
+        <div class="service-box border-end-lg">
+          <div class="icon-box"><i class="bi bi-chat-dots"></i></div>
+          <h3>Konsultasi</h3>
+          <p>Layanan strategis untuk membantu bisnis Anda dalam aspek legal, operasional, dan sumber daya manusia.</p>
+          <ul class="service-features">
+            <li><i class="bi bi-check-circle"></i> OSS RBA & PB-UMKU</li>
+            <li><i class="bi bi-check-circle"></i> LKPM & Pelaporan BKPM</li>
+            <li><i class="bi bi-check-circle"></i> Struktur & Skala Upah</li>
+            <li><i class="bi bi-check-circle"></i> Perencanaan Karir & SDM</li>
+            <li><i class="bi bi-check-circle"></i> Penyelesaian Hubungan Industrial</li>
+          </ul>
+          <a href="konsultasi.html" class="read-more">Lihat Semua <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Pelatihan -->
+      <div class="col-lg-5">
+        <div class="service-box">
+          <div class="icon-box"><i class="bi bi-easel2"></i></div>
+          <h3>Pelatihan</h3>
+          <p>Program pelatihan untuk meningkatkan kompetensi karyawan dan efektivitas organisasi.</p>
+          <ul class="service-features">
+            <li><i class="bi bi-check-circle"></i> Kepemimpinan Efektif</li>
+            <li><i class="bi bi-check-circle"></i> Teknik Wawancara & Presentasi</li>
+            <li><i class="bi bi-check-circle"></i> Building Teamwork</li>
+            <li><i class="bi bi-check-circle"></i> GRC & SMK3</li>
+            <li><i class="bi bi-check-circle"></i> Pengembangan Budaya Organisasi</li>
+          </ul>
+          <a href="pelatihan.html" class="read-more">Lihat Semua <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="jadwal" class="schedule-cards section">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title text-center">
+      <h2>Jadwal Program</h2>
+      <p>Ikuti program pelatihan dan konsultasi unggulan kami. Klik tombol untuk mendaftar.</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="schedule-card">
+          <div class="schedule-date">
+            <span class="start-date">31 Juli 2025</span> - 
+            <span class="end-date">1 Agustus 2025</span>
+          </div>
+          <h4 class="schedule-title">Effective Leadership Training</h4>
+          <p class="schedule-location"><i class="bi bi-geo-alt"></i> Jakarta</p>
+          <span class="status status-open">Dibuka</span>
+          <a href="https://wa.me/6281808002409?text=Halo%20saya%20tertarik%20ikut%20program%20Effective%20Leadership%20Training" target="_blank" class="btn-register">Daftar Sekarang</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="schedule-card">
+          <div class="schedule-date">
+            <span class="start-date">24 Juli 2025</span> - 
+            <span class="end-date">25 Juli 2025</span>
+          </div>
+          <h4 class="schedule-title">Perizinan Berbasis Risiko (OSS RBA)</h4>
+          <p class="schedule-location"><i class="bi bi-geo-alt"></i> Bandung</p>
+          <span class="status status-full">Penuh</span>
+          <a href="https://wa.me/6281808002409?text=Halo%20saya%20ingin%20ikut%20OSS%20RBA%20Bandung" target="_blank" class="btn-register whatsapp">Tanya via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="schedule-card">
+          <div class="schedule-date">
+            <span class="start-date">5 Agustus 2025</span> - 
+            <span class="end-date">6 Agustus 2025</span>
+          </div>
+          <h4 class="schedule-title">Manajemen Kinerja Berbasis KPI</h4>
+          <p class="schedule-location"><i class="bi bi-geo-alt"></i> Online</p>
+          <span class="status status-open">Dibuka</span>
+          <a href="https://wa.me/6281808002409?text=Halo%20saya%20mau%20daftar%20KPI%20Training%20Online" target="_blank" class="btn-register">Daftar Sekarang</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="trainer" class="team section light-background">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2>Trainer Kami</h2>
+      <p>Tim trainer profesional kami siap memberikan pelatihan dan konsultasi terbaik untuk kebutuhan bisnis Anda.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Trainer 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/img/trainers/trainer1.webp" class="img-fluid" alt="Yuni Pratikno">
+            <div class="team-overlay">
+              <p>Berpengalaman lebih dari 10 tahun dalam pengembangan SDM dan pelatihan organisasi.</p>
+              <div class="team-social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-content">
+            <h4>Dr. Drs. Yuni Pratikno, SE.,MM.,MH.</h4>
+            <span class="position">HR Management</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trainer 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/img/trainers/trainer2.webp" class="img-fluid" alt="Haspul Nasir">
+            <div class="team-overlay">
+              <p>Ahli legalitas usaha dan perizinan berbasis OSS-RBA serta pengembangan struktur perusahaan.</p>
+              <div class="team-social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-content">
+            <h4>Drs. Haspul Nasir, MM</h4>
+            <span class="position">Konsultan Legal & Manajemen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trainer 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="assets/img/trainers/trainer3.webp" class="img-fluid" alt="Maulana Arief">
+            <div class="team-overlay">
+              <p>Pakar hubungan industrial dan regulasi ketenagakerjaan dengan pendekatan strategis.</p>
+              <div class="team-social">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-content">
+            <h4>Maulana Arief Rachman Hakim, SP.,MM., M.Han.</h4>
+            <span class="position">Konsultan Industrial Relations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+
+<section id="klien" class="clients section">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Klien Kami</h2>
+      <p>Kami telah dipercaya oleh berbagai perusahaan dan instansi dalam memberikan layanan konsultasi dan pelatihan terbaik.</p>
+    </div>
+
+    <div class="clients-slider">
+      <div class="slider-track">
+        <!-- Asli -->
+        <img src="assets/img/clients/client 1.png" alt="Logo Klien 1" />
+        <img src="assets/img/clients/client 2.jpg" alt="Logo Klien 2" />
+        <img src="assets/img/clients/client 3.png" alt="Logo Klien 3" />
+        <img src="assets/img/clients/client 4.png" alt="Logo Klien 4" />
+        <img src="assets/img/clients/client 5.png" alt="Logo Klien 5" />
+        <img src="assets/img/clients/client 6.png" alt="Logo Klien 6" />
+        <img src="assets/img/clients/client 7.png" alt="Logo Klien 7" />
+        <img src="assets/img/clients/client 8.png" alt="Logo Klien 8" />
+
+        <!-- Duplikat -->
+        <img src="assets/img/clients/client 1.png" alt="Logo Klien 1" />
+        <img src="assets/img/clients/client 2.jpg" alt="Logo Klien 2" />
+        <img src="assets/img/clients/client 3.png" alt="Logo Klien 3" />
+        <img src="assets/img/clients/client 4.png" alt="Logo Klien 4" />
+        <img src="assets/img/clients/client 5.png" alt="Logo Klien 5" />
+        <img src="assets/img/clients/client 6.png" alt="Logo Klien 6" />
+        <img src="assets/img/clients/client 7.png" alt="Logo Klien 7" />
+        <img src="assets/img/clients/client 8.png" alt="Logo Klien 8" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="partner" class="partners section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Our Partners</h2>
+      <p>Kami berkolaborasi dengan berbagai perusahaan dan organisasi terpercaya.</p>
+    </div>
+
+    <div class="row justify-content-center align-items-center gy-4">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <img src="assets/img/partners/partner1.png" alt="Partner 1" class="partner-logo">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <img src="assets/img/partners/partner2.png" alt="Partner 2" class="partner-logo">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <img src="assets/img/partners/partner3.png" alt="Partner 3" class="partner-logo">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <img src="assets/img/partners/partner4.jpeg" alt="Partner 4" class="partner-logo">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <img src="assets/img/partners/partner5.png" alt="Partner 5" class="partner-logo">
+      </div>
+      <!-- Tambahkan partner lainnya -->
+    </div>
+  </div>
+</section>
+
+<!-- ======= Gallery Section ======= -->
+<section id="dokumentasi" class="gallery section">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title text-center">
+      <h2>Dokumentasi Kegiatan</h2>
+      <p>Berikut adalah cuplikan kegiatan pelatihan dan konsultasi yang telah kami selenggarakan bersama berbagai klien.</p>
+    </div>
+
+    <div class="row g-4 gallery-container">
+      <div class="col-6 col-md-4 col-lg-3 gallery-item">
+        <a href="assets/img/gallery/kegiatan1.jpeg" class="glightbox">
+          <img src="assets/img/gallery/kegiatan1.jpeg" class="gallery-img" alt="Dokumentasi 1">
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item">
+        <a href="assets/img/gallery/kegiatan2.jpeg" class="glightbox">
+          <img src="assets/img/gallery/kegiatan2.jpeg" class="gallery-img" alt="Dokumentasi 2">
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item">
+        <a href="assets/img/gallery/kegiatan6.jpeg" class="glightbox">
+          <img src="assets/img/gallery/kegiatan6.jpeg" class="gallery-img" alt="Dokumentasi 3">
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-item">
+        <a href="assets/img/gallery/kegiatan4.jpeg" class="glightbox">
+          <img src="assets/img/gallery/kegiatan4.jpeg" class="gallery-img" alt="Dokumentasi 4">
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA to Full Gallery -->
+    <div class="text-center mt-5">
+      <a href="gallery.html" class="btn-readmore">Lihat Selengkapnya</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="artikel" class="artikel section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2>Artikel & Wawasan</h2>
+      <p>Temukan informasi terbaru seputar pelatihan, SDM, regulasi usaha, dan manajemen.</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <!-- Artikel 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="artikel-card">
+          <img src="assets/img/artikel/product-1.jpg" alt="Artikel 1" class="img-fluid artikel-img">
+          <div class="artikel-content">
+            <span class="artikel-date">21 Juni 2025</span>
+            <h5 class="artikel-title">Pentingnya Training Kepemimpinan dalam Dunia Kerja</h5>
+            <p class="artikel-excerpt">Leadership bukan hanya jabatan, tapi keterampilan yang dapat dilatih. Inilah alasannya kenapa pelatihan ini penting...</p>
+            <a href="artikel-detail.html" class="btn-readmore">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="artikel-card">
+          <img src="assets/img/artikel/product-2.jpg" alt="Artikel 2" class="img-fluid artikel-img">
+          <div class="artikel-content">
+            <span class="artikel-date">12 Juni 2025</span>
+            <h5 class="artikel-title">OSS RBA: Apa yang Harus Diketahui Pelaku Usaha?</h5>
+            <p class="artikel-excerpt">Sistem OSS RBA merupakan kebijakan pemerintah untuk menyederhanakan izin usaha. Berikut penjelasannya secara ringkas...</p>
+            <a href="artikel-detail.html" class="btn-readmore">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="artikel-card">
+          <img src="assets/img/artikel/product-3.jpg" alt="Artikel 3" class="img-fluid artikel-img">
+          <div class="artikel-content">
+            <span class="artikel-date">5 Juni 2025</span>
+            <h5 class="artikel-title">Cara Menyusun Struktur dan Skala Upah yang Ideal</h5>
+            <p class="artikel-excerpt">Salah satu tugas HR yang kompleks adalah membuat struktur dan skala upah yang adil dan kompetitif...</p>
+            <a href="artikel-detail.html" class="btn-readmore">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="quotes" class="quotes section">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center">
+      <h2>Quotes & Nilai Kami</h2>
+      <p>Nilai yang menginspirasi setiap langkah Prama Consulting & Training</p>
+    </div>
+
+    <div id="quotesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Quote 1 -->
+        <div class="carousel-item active">
+          <div class="quote-item text-center">
+            <p class="quote-text">“Pengembangan sumber daya manusia adalah kunci untuk pertumbuhan bisnis yang berkelanjutan.”</p>
+            <h5 class="quote-author">— Prama Daksa Infotama</h5>
+          </div>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="carousel-item">
+          <div class="quote-item text-center">
+            <p class="quote-text">“Kami percaya bahwa kepatuhan pada regulasi bukan hambatan, melainkan fondasi untuk inovasi.”</p>
+            <h5 class="quote-author">— Tim Konsultan</h5>
+          </div>
+        </div>
+
+        <!-- Quote 3 -->
+        <div class="carousel-item">
+          <div class="quote-item text-center">
+            <p class="quote-text">“Transformasi organisasi dimulai dari mindset yang tepat dan pelatihan yang relevan.”</p>
+            <h5 class="quote-author">— Trainer Senior</h5>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#quotesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#quotesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Hubungi Kami</h2>
+    <p>
+      Jika Anda memiliki pertanyaan terkait layanan pelatihan, konsultasi, maupun kerja sama dengan 
+      PRAMA Consulting & Training, silakan hubungi kami melalui informasi di bawah ini atau kirim pesan langsung lewat formulir.
+    </p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="contact-main-wrapper">
+      
+      <!-- Google Maps -->
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.377204564597!2d106.82854107485461!3d-6.213882993774032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4088c56757d%3A0x253f935e5b0a44fd!2sGedung%20Wirausaha!5e0!3m2!1sid!2sid!4v1755974028253!5m2!1sid!2sid" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Contact Info + Form -->
+      <div class="contact-content">
+        
+        <!-- Info Cards -->
+        <div class="contact-cards-container" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-card">
+            <div class="icon-box">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Alamat</h4>
+              <p>
+                Gd. Wirausaha Lt.1, Unit 104, Jl. HR Rasuna Said, Karet, Setiabudi, 
+                Jakarta Selatan, DKI Jakarta.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-box">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>pramadaksainfotama@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-box">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Telepon</h4>
+              <p>0818-0800-2409</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon-box">
+              <i class="bi bi-clock"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Jam Kerja</h4>
+              <p>Senin – Jumat: 09.00 - 17.00 WIB</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Info Cards -->
+
+        <!-- Form -->
+        <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
+          <h3>Kirim Pesan</h3>
+          <p>
+            Tim kami akan dengan senang hati membantu Anda. Silakan isi formulir berikut, 
+            dan kami akan segera menghubungi Anda kembali.
+          </p>
+
+          <form action="forms/contact.php" method="post" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anda" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Pesan" required></textarea>
+            </div>
+
+            <div class="my-3">
+              <div class="loading">Sedang mengirim...</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Pesan Anda telah terkirim. Terima kasih!</div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit">Kirim Pesan</button>
+              <!-- Kalau mau tambahin sosmed, aktifin blok ini -->
+              <!--
+              <div class="social-links">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+              -->
+            </div>
+          </form>
+        </div>
+        <!-- End Form -->
+
+      </div>
+      <!-- End Contact Content -->
+
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+
+  </main>
+
+<footer class="footer">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Kolom 1 -->
+      <div class="col-lg-4 col-md-6 footer-about mb-4">
+        <div class="d-flex align-items-center mb-2">
+          <img src="assets/img/logo prama nobg.png" alt="" style="height: 40px;">
+          <h5 class="ms-2">Prama Daksa Infotama</h5>
+        </div>
+        <p>Kami adalah konsultan terpercaya dalam pelatihan, legalitas usaha, dan pengembangan SDM berbasis regulasi yang mendukung pertumbuhan bisnis Anda.</p>
+      </div>
+
+      <!-- Kolom 2 (opsional bisa diisi atau dikosongkan) -->
+      <div class="col-lg-4 col-md-6 footer-middle mb-4">
+        <!-- Opsional: Tambah Google Maps kecil atau menu navigasi -->
+      </div>
+
+      <!-- Kolom 3 -->
+      <div class="col-lg-4 col-md-6 footer-contact mb-4">
+        <h5>Hubungi Kami</h5>
+        <p><strong>Alamat:</strong><br>
+          Gd. Wirausaha Lt.1, Unit 104<br>
+          Jl. HR Rasuna Said, Karet, Setiabudi,<br>
+          Jakarta Selatan, DKI Jakarta 12920</p>
+        <p><strong>Telepon:</strong> 0818-0800-2409</p>
+        <p><strong>Email:</strong> <a href="mailto:pramadaksainfotama@gmail.com">pramadaksainfotama@gmail.com</a></p>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="text-center py-2 copyright">
+      &copy; 2025 <strong>Prama Daksa Infotama</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/clients-carousel.js" defer></script>
+
+  <script>
+  var swiper = new Swiper(".partner-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+  });
+</script>
+
+</body>
+
+</html>

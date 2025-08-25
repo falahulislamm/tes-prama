@@ -1,0 +1,2562 @@
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito",  sans-serif;
+  --nav-font: "Inter",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --primary-color: #1d4768;         /* Biru tua dari logo */
+  --secondary-color: #55813a;       /* Hijau dari logo */
+  --light-color: #dddddd;           /* Abu terang dari logo */
+
+  --accent-color: var(--secondary-color);
+  --heading-color: var(--primary-color);
+  --default-color: #444;
+  --contrast-color: #ffffff;
+  --surface-color: #ffffff;
+  --background-color: #ffffff;
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #201E1F;  /* The default color of the main navmenu links */
+  --nav-hover-color: #0d5c50; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #313336; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0d5c50; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f8fbfc;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/* PHP Email Form Messages
+------------------------------*/
+.php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+/* ------------------------------
+   Header
+--------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  padding: 5px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 48px;
+  margin-right: 10px;
+}
+
+.header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+/* Header transparan di homepage */
+.index-page .header {
+  background-color: #ffffff;
+}
+
+.index-page.scrolled .header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Header solid di halaman dalam */
+body:not(.index-page) .header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ------------------------------
+   Page Title
+--------------------------------*/
+.page-title {
+  padding: 100px 0 60px; /* ruang atas biar lega */
+  text-align: center;
+  position: relative;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary-color), #123247);
+  margin-top: 70px; /* kompensasi header fixed */
+}
+
+.page-title h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-title p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #eaeaea;
+}
+
+.page-title .breadcrumbs ol {
+  display: inline-flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.page-title .breadcrumbs a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.page-title .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.page-title .breadcrumbs .current {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+/* Deep dropdown arah ke kanan */
+.navmenu .dropdown .dropdown ul {
+  top: 0;
+  left: 100%;   /* sebelumnya -90% */
+  visibility: hidden;
+}
+
+.navmenu .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;   /* sebelumnya -100% */
+  visibility: visible;
+}
+
+
+  .navmenu .megamenu {
+    position: static;
+  }
+
+  .navmenu .megamenu ul {
+    margin: 0;
+    padding: 10px;
+    background: var(--nav-dropdown-background-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 130%;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+  }
+
+  .navmenu .megamenu ul li {
+    flex: 1;
+  }
+
+  .navmenu .megamenu ul li a,
+  .navmenu .megamenu ul li:hover>a {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .megamenu ul li a:hover,
+  .navmenu .megamenu ul li .active,
+  .navmenu .megamenu ul li .active:hover {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .megamenu:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.5s ease-in-out;
+    box-shadow: none;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+
+
+/* ============================================
+   Tambahan: Dropdown Button Custom (Hubungi Kami)
+=============================================== */
+.navmenu .custom-button-dropdown {
+  position: relative;
+  margin-left: 15px;
+}
+
+.navmenu .custom-button-dropdown > a.custom-button {
+  background-color: #55813a; /* Warna dari palet Prama */
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 32px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.navmenu .custom-button-dropdown > a.custom-button:hover {
+  background-color: #44672f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Menu khusus tombol */
+.navmenu .custom-button-dropdown ul {
+  margin: 0;
+  padding: 8px 0;
+  background: #fff;
+  border-radius: 6px;
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; /* memastikan dropdown sejajar kiri tombol */
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navmenu .custom-button-dropdown:hover ul {
+  display: block;
+}
+
+.navmenu .custom-button-dropdown ul li a {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #1d4768;
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.navmenu .custom-button-dropdown ul li a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Pastikan tidak rusak saat diresponsif */
+@media (max-width: 1199px) {
+  .navmenu .custom-button-dropdown > a.custom-button {
+    padding: 12px 20px;
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .navmenu .custom-button-dropdown ul {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+/* ===== Footer (Branding PRAMA) ===== */
+.footer {
+  background: #f9f9f9;
+  padding: 40px 0 20px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1d4768;
+}
+
+.footer a {
+  color: #55813a;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #55813a;
+}
+
+.footer .social-icons a:hover {
+  color: #3d5a26;
+}
+
+
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ffffff;
+  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+/* === Page Title (Default Gradient) === */
+.page-title {
+  background: linear-gradient(135deg, var(--primary-color), #123247); /* biru PRAMA */
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.page-title p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+.page-title .breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.page-title .breadcrumbs a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-title .breadcrumbs .current {
+  color: #a8d5b9; /* hijau lembut (secondary brand) */
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  padding: 0;
+}
+
+.hero .carousel {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6); /* agar teks lebih terbaca */
+}
+
+.hero .carousel-item {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero .carousel-container {
+  position: absolute;
+  inset: 120px 64px 64px 64px; /* Menambahkan lebih banyak ruang di atas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 3;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s both;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s both 0.3s;
+  max-width: 700px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hero .btn-get-started {
+  background: var(--accent-color);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 36px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s both 0.5s;
+}
+
+.hero .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--accent-color), #000 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation controls */
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+  width: 10%;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.hero .carousel-control-prev:hover,
+.hero .carousel-control-next:hover {
+  opacity: 0.8;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+  font-size: 32px;
+  color: #fff;
+}
+
+.hero .carousel-indicators {
+  list-style: none;
+}
+
+.hero .carousel-indicators li {
+  cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero .carousel-container {
+    inset: 100px 40px 40px 40px; /* Memberikan ruang lebih pada tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .hero .carousel-container {
+    inset: 120px 30px 30px 30px; /* Menambahkan lebih banyak ruang atas pada layar kecil */
+  }
+
+  .hero .btn-get-started {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    width: 15%; /* Membuat kontrol prev/next lebih besar di mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .carousel-container {
+    inset: 100px 20px 20px 20px; /* Menambahkan ruang lebih besar di perangkat sangat kecil */
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    max-width: 85%;
+  }
+
+  .hero .btn-get-started {
+    font-size: 12px;
+    padding: 8px 25px;
+  }
+
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    width: 20%; /* Kontrol prev/next lebih besar */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about {
+  padding: 80px 0;
+  background-color: var(--background-color);
+}
+
+/* Section Title */
+.about .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.about .section-title p {
+  color: var(--default-color);
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Deskripsi Utama */
+.about .content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+.about .content p {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 20px;
+}
+
+/* Tombol */
+.about .btn-get-started {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 28px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.about .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--accent-color), #000 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Box Grid */
+.about .icon-box {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.about .icon-box:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about .icon-box i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.about .icon-box h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.about .icon-box p {
+  font-size: 0.95rem;
+  color: var(--default-color);
+  margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+/* === Section: Services === */
+.services {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.services .row {
+  --bs-gutter-x: 3rem; /* Tambah jarak horizontal antar col */
+  --bs-gutter-y: 2rem; /* Tambah jarak vertikal antar col */
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 15px;
+}
+
+.service-features li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.read-more {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .service-box {
+    margin-bottom: 30px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+.button {
+  background: linear-gradient(45deg, #F58F8C, #6C71B4);
+  color: #fff;
+  padding: 15px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: left;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  width: 100%; /* Tambahkan ini jika ingin lebar penuh dalam <li> */
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #6C71B4, #F58F8C);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Section: Services === */
+.services {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+  font-size: 36px;
+  color: var(--secondary-color); /* hijau */
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-color); /* biru tua */
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service-features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 15px;
+}
+
+.service-features li i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.read-more {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.border-end-lg {
+  border-right: 1px solid #ddd;
+}
+
+/* Responsive adjustment */
+@media (max-width: 991px) {
+  .border-end-lg {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+.clients {
+  padding: 80px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.clients .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.clients .section-title p {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 40px;
+}
+
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollLeft 30s linear infinite;
+  width: max-content;
+}
+
+.slider-track img {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.slider-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-track {
+    gap: 24px;
+  }
+
+  .slider-track img {
+    height: 50px;
+  }
+}
+
+.partners {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.partners .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.partners .section-title p {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 40px;
+}
+
+.partner-logo {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+  display: block;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+/* ===== Gallery Section ===== */
+.gallery {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.gallery .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.gallery .section-title p {
+  font-size: 1rem;
+  color: var(--default-color);
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;    /* Biar seragam */
+  object-fit: cover;      /* Potong gambar agar proporsional */
+  object-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+  cursor: zoom-in;
+}
+
+/* CTA button bawah gallery */
+.btn-cta {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #55813a; /* Hijau branding */
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta:hover {
+  background-color: #44672f;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* === Trainer Section (Team Style - Revisi Branding PRAMA) === */
+.team .team-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  background-color: #ffffff;
+  transition: transform 0.4s ease;
+  height: 100%;
+}
+
+.team .team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team .team-card:hover .team-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team .team-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .team-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.team .team-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.team .team-overlay p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* dipastikan putih untuk keterbacaan */
+}
+
+.team .team-social {
+  display: flex;
+  gap: 15px;
+}
+
+.team .team-social a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.team .team-social a:hover {
+  color: var(--secondary-color); /* hijau branding */
+}
+
+.team .team-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.team .team-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color); /* biru tua branding */
+}
+
+.team .team-content .position {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background-color: rgba(85, 129, 58, 0.1); /* hijau transparan */
+  border-radius: 30px;
+  font-size: 0.875rem;
+  color: var(--secondary-color); /* hijau */
+}
+
+
+/* === Jadwal Program - Card Layout === */
+.schedule-cards .schedule-card {
+  background: #ffffff;
+  border: 1px solid #dce4dc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  position: relative;
+  height: 100%;
+}
+
+.schedule-cards .schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Tanggal Start & End */
+.schedule-cards .schedule-date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.schedule-cards .start-date {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.schedule-cards .end-date {
+  font-weight: 500;
+  color: #666;
+}
+
+/* Judul & Lokasi */
+.schedule-cards .schedule-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.schedule-cards .schedule-location {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Status Label */
+.schedule-cards .status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.schedule-cards .status-open {
+  background-color: #d1e7dd;
+  color: #1f5132;
+}
+
+.schedule-cards .status-full {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* Tombol */
+.btn-register {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 18px;
+  background-color: var(--secondary-color); /* Hijau utama PRAMA */
+  color: #fff;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.btn-register:hover {
+  background-color: #44672f; /* Hijau lebih gelap */
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Tombol WhatsApp */
+.btn-register.whatsapp {
+  background-color: #25D366; /* Hijau WA */
+}
+
+.btn-register.whatsapp:hover {
+  background-color: #1ebe5d; /* Hijau WA lebih gelap */
+}
+
+
+/* ===== Quotes Section ===== */
+.quotes {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.quote-item {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 1rem;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(40%);
+  width: 5%;
+}
+
+/* ===== Artikel Section (Branding PRAMA) ===== */
+.artikel {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.artikel-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artikel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.artikel-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artikel-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.artikel-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.artikel-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--primary-color); /* Biru tua PRAMA */
+}
+
+.artikel-excerpt {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.btn-readmore {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  background-color: var(--secondary-color, #55813a);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-readmore:hover,
+.btn-readmore:focus,
+.btn-readmore:active {
+  background-color: #456c2f;
+  color: #fff; /* Tambahkan ini untuk menjaga teks tetap putih */
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+
+/* === Section: Why Us === */
+.why-us {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.why-us-box {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.why-us-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #e7f5ec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper i {
+  font-size: 2rem;
+  color: #55813a;
+}
+
+.why-us-box h5 {
+  margin-top: 15px;
+  color: #1e1e1e;
+}
+
+.why-us-box p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/*--------------------------------------------------------------
+# Contact Section (PRAMA Branding) - Fixed Responsive
+--------------------------------------------------------------*/
+.contact {
+  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
+  padding: 80px 0;
+}
+
+.contact .container {
+  max-width: 1200px;
+}
+
+.contact .contact-main-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .contact .contact-main-wrapper {
+    grid-template-columns: 45% 55%;
+    min-height: 600px;
+  }
+}
+
+.contact .map-wrapper {
+  height: 300px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .contact .map-wrapper {
+    height: 100%;
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact .contact-cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* FIX: ubah breakpoint ke 768px agar Mobile S & M tetap 1 kolom */
+@media (min-width: 768px) {
+  .contact .contact-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact .contact-card {
+  background-color: var(--surface-color);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact .contact-card .icon-box {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .contact-card .icon-box i {
+  font-size: 22px;
+  color: var(--accent-color);
+}
+
+.contact .contact-card .contact-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.contact .contact-card .contact-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--default-color);
+  margin-bottom: 0;
+
+  /* FIX: supaya teks panjang nggak kepotong */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact .contact-form-container {
+  background-color: var(--surface-color);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact .contact-form-container h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  position: relative;
+  padding-left: 15px;
+}
+
+.contact .contact-form-container h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.contact .contact-form-container>p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: var(--default-color);
+}
+
+.contact .contact-form-container .php-email-form .form-control {
+  height: auto;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  transition: all 0.3s ease;
+}
+
+.contact .contact-form-container .php-email-form .form-control:focus {
+  background-color: var(--surface-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.contact .contact-form-container .php-email-form .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.contact .contact-form-container .php-email-form textarea.form-control {
+  min-height: 140px;
+}
+
+.contact .contact-form-container .php-email-form .form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .contact .contact-form-container .php-email-form .form-submit {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.contact .contact-form-container .php-email-form button {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-form-container .php-email-form button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), #000 15%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
+.contact .contact-form-container .php-email-form .social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.contact .contact-form-container .php-email-form .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 20%);
+  color: var(--heading-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact .contact-form-container .php-email-form .social-links a:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact .contact-form-container {
+    padding: 25px 20px;
+  }
+
+  .contact .contact-form-container h3 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+.icon-checklist {
+  list-style: none;
+  padding-left: 0;
+  color: var(--default-color);
+}
+
+.icon-checklist li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.icon-checklist li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.team h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--heading-color);
+}
+
+.team p {
+  font-size: 0.95rem;
+  color: var(--default-color);
+  margin-bottom: 0;
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.05);
+}
+
+/* === Clients & Partners Logo Grid === */
+.client-logo,
+.partner-logo {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.client-logo:hover,
+.partner-logo:hover {
+  transform: scale(1.05);
+  filter: none;
+}
+
+/* === Trainer Profile Section (Fixing Layout & Branding) === */
+.trainer-profile {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px dashed #ccc; /* Lebih halus */
+}
+
+.trainer-photo {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainer-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.trainer-info-box {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  text-align: left;
+  margin-top: 0; /* Tidak terlalu mepet dengan foto */
+}
+
+.trainer-info-box h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.trainer-info-box p {
+  font-size: 0.875rem;
+  margin: 0;
+  color: #dddddd;
+}
+
+.trainer-description {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Hapus garis bawah terakhir */
+.trainer-profile:last-child {
+  border-bottom: none;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .trainer-profile {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .trainer-description {
+    margin-top: 20px;
+  }
+}
+
+/* === Section: Gallery === */
+/* Gallery Items */
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.02);
+}
+.gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.gallery .caption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+}
+
+/* Gallery Pagination */
+.gallery-wrapper .gallery-page {
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+.gallery-wrapper .gallery-page.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.dot-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dot-pagination .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot-pagination .dot.active {
+  background-color: #55813a;
+}
+
+
+/* === Section: Layanan === */
+.service-list {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+.service-list li {
+  margin-bottom: 8px;
+}
+
+.text-success {
+  color: #55813a !important;
+}
+
+
+/* === Section: CTA (Card Style) === */
+.cta-section {
+  padding: 80px 0;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #55813a, #6a9f4c); /* gradasi hijau branding */
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cta-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.cta-subheading {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #f1f1f1;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #55813a;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-heading {
+    font-size: 1.5rem;
+  }
+  .cta-subheading {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* === Section: Visi & Misi (Stacked) === */
+#visimisi .icon-box {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: 0.3s;
+}
+
+#visimisi .icon-box:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Header flex untuk icon + judul */
+#visimisi .icon-box-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* jarak icon dan teks */
+  margin-bottom: 10px;
+}
+
+#visimisi .icon-box i {
+  font-size: 32px;
+  color: var(--secondary-color); /* hijau dari logo */
+  flex-shrink: 0; /* supaya icon tidak menyusut */
+}
+
+#visimisi .icon-box h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+#visimisi .icon-box p,
+#visimisi .icon-box ul {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+#visimisi .mission-list {
+  padding-left: 20px; /* beri jarak bullet */
+}
+
+#visimisi .mission-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  list-style: disc;
+}
+
+@media (max-width: 768px) {
+  #visimisi .icon-box i {
+    font-size: 28px;
+  }
+}
+
+
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.service-card .icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: #e9f3eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.service-card .icon-wrapper i {
+  font-size: 28px;
+  color: var(--secondary-color);
+}
+
+.service-card h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.service-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(85, 129, 58, 0.85);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* artikel */
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.main-article {
+  flex: 3;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  line-height: 1.8;
+}
+
+/* Artikel utama - gambar besar */
+.main-article img.article-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Caption gambar artikel utama */
+.main-article figcaption {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Sidebar - thumbnail gambar kecil */
+.recent-posts img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+  flex-shrink: 0; /* supaya tidak mengecil */
+}
+
+/* Jika ingin sidebar thumbnails lebih tajam pada retina display, bisa tambah */
+@media only screen and (min-resolution: 192dpi), 
+       only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .recent-posts img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+.sidebar {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+
+.sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.recent-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-posts li + li {
+  margin-top: 1rem;
+}
+
+.recent-posts a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.recent-posts a:hover {
+  background-color: #e9f1ff;
+}
+
+.recent-posts img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-date {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.post-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start; /* ini supaya sidebar menyesuaikan tinggi kontennya */
+}
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+

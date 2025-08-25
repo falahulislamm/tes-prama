@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Prama Consulting & Training</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/logo prama nobg.png" rel="icon" />
+
+  <!-- Fonts & Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+/* Custom posisi tombol carousel */
+#konsultasiCarousel .carousel-control-prev,
+#konsultasiCarousel .carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 10;
+}
+
+#konsultasiCarousel .carousel-control-prev {
+  left: -2%;
+}
+
+#konsultasiCarousel .carousel-control-next {
+  right: -2%;
+}
+
+/* Untuk tampilan layar kecil */
+@media (max-width: 768px) {
+  #konsultasiCarousel .carousel-control-prev,
+  #konsultasiCarousel .carousel-control-next {
+    width: 15%;
+    font-size: 1.5rem;
+  }
+
+  #konsultasiCarousel .carousel-control-prev {
+    left: -5%;
+  }
+
+  #konsultasiCarousel .carousel-control-next {
+    right: -5%;
+  }
+}
+
+#konsultasiCarousel .carousel-indicators {
+  bottom: -30px; /* Jarak dari carousel */
+}
+
+#konsultasiCarousel .carousel-indicators button {
+  background-color: #198754; /* Warna hijau (sesuai text-success Bootstrap) */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+#konsultasiCarousel .carousel-indicators button.active {
+  opacity: 1;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo prama nobg.png" alt="">
+        <h1 class="sitename">Prama Daksa Infotama</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="about.html">Profil Perusahaan</a></li>
+            <li><a href="trainer.html">Trainer</a></li>
+            <li><a href="client.html">Klien</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><span>Layanan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <!-- Deep Dropdown -->
+            <li class="dropdown">
+              <a href="#"><span>Program</span> <i class="bi bi-chevron-right toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="konsultasi.html">Konsultasi</a></li>
+                <li><a href="pelatihan.html">Pelatihan</a></li>
+              </ul>
+            </li>
+            <li><a href="jadwal.html">Jadwal</a></li>
+          </ul>
+        </li>
+
+        <li><a href="gallery.html">Dokumentasi</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+
+        <li><a href="contact.html" class="custom-button">Hubungi Kami</a></li>
+      </ul>
+
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+  <!-- ======= Page Title ======= -->
+<div class="page-title dark-background">
+  <div class="container position-relative">
+    <h1>Program Kami</h1>
+    <p>Jelajahi berbagai program konsultasi dan pelatihan unggulan dari PRAMA Consulting and Training.</p>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="index.html">Beranda</a></li>
+        <li class="current">Program</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+    
+<!-- ===== Layanan Konsultasi (Carousel Version) ===== -->
+<section id="layanan-konsultasi" class="section light-background">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title text-center">
+      <h2>Layanan Konsultasi</h2>
+      <p>Solusi konsultasi yang komprehensif untuk kebutuhan organisasi Anda.</p>
+    </div>
+
+    <!-- Carousel -->
+    <div id="konsultasiCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- === PAGE 1 (1-8) === -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+
+            <!-- 1 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="icon-wrapper"><i class="bi bi-briefcase-fill"></i></div>
+                <h5 class="fw-bold">GA - Perizinan Berusaha Secara Elektronik Melalui OSS RBA</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                <div class="icon-wrapper"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <h5 class="fw-bold">GA - Konsultasi penyusunan Laporan Kegiatan Penanaman Modal (LKPM)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                <div class="icon-wrapper"><i class="bi bi-journal-text"></i></div>
+                <h5 class="fw-bold">GA - Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB-UMKU)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal4">
+                <div class="icon-wrapper"><i class="bi bi-people-fill"></i></div>
+                <h5 class="fw-bold">SDM - Konsultasi Efektifitas Seleksi dan Penempatan Tenaga Kerja</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal5">
+                <div class="icon-wrapper"><i class="bi bi-diagram-3-fill"></i></div>
+                <h5 class="fw-bold">SDM - Konsultasi Perencanaan Karir dan Suksesi</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal6">
+                <div class="icon-wrapper"><i class="bi bi-mortarboard-fill"></i></div>
+                <h5 class="fw-bold">SDM - Konsultasi Penyusunan Analisa Kebutuhan Training & Pengembangan</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal7">
+                <div class="icon-wrapper"><i class="bi bi-cash-stack"></i></div>
+                <h5 class="fw-bold">SDM - Konsultasi Penyusunan Struktur Upah dan Skala Upah (SUSU)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal8">
+                <div class="icon-wrapper"><i class="bi bi-clipboard-data-fill"></i></div>
+                <h5 class="fw-bold">SDM - Konsultasi Job Analysis (Analisis Jabatan)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- === PAGE 2 (9-16) === -->
+        <div class="carousel-item">
+          <div class="row g-4">
+
+            <!-- 9 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal9">
+                <div class="icon-wrapper"><i class="bi bi-building-fill"></i></div>
+                <h5 class="fw-bold">SDM - Pengembangan Organisasi</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal10">
+                <div class="icon-wrapper"><i class="bi bi-laptop"></i></div>
+                <h5 class="fw-bold">SDM - Sistem Informasi SDM berbasis Teknologi</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal11">
+                <div class="icon-wrapper"><i class="bi bi-graph-up-arrow"></i></div>
+                <h5 class="fw-bold">SDM - Manajemen Kinerja Berbasis Kompetensi</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal12">
+                <div class="icon-wrapper"><i class="bi bi-bar-chart-fill"></i></div>
+                <h5 class="fw-bold">SDM - KPI Berbasis Balance Score Card (BSC)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal13">
+                <div class="icon-wrapper"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                <h5 class="fw-bold">SDM & GA - Penyelesaian Perselisihan Hubungan Industrial</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal14">
+                <div class="icon-wrapper"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                <h5 class="fw-bold">SDM & GA - Pendampingan PHK sesuai regulasi</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal15">
+                <div class="icon-wrapper"><i class="bi bi-people-fill"></i></div>
+                <h5 class="fw-bold">SDM & GA - LKS Bipartit, PP, dan PKB</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="col-md-4">
+              <div class="service-card" data-bs-toggle="modal" data-bs-target="#modal16">
+                <div class="icon-wrapper"><i class="bi bi-clipboard-check-fill"></i></div>
+                <h5 class="fw-bold">SDM - Konsultansi Pengembangan SDM (Psikometri, Assessment, dsb)</h5>
+                <div class="overlay">Detail Program</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#konsultasiCarousel" role="button" data-bs-slide="prev">
+        <span class="bi bi-chevron-left fs-2 text-success" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#konsultasiCarousel" role="button" data-bs-slide="next">
+        <span class="bi bi-chevron-right fs-2 text-success" aria-hidden="true"></span>
+      </a>
+
+      <!-- Dot Pagination -->
+<div class="dot-pagination text-center mt-4">
+  <button class="dot active" data-bs-slide-to="0" aria-label="Halaman 1"></button>
+  <button class="dot" data-bs-slide-to="1" aria-label="Halaman 2"></button>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================== MODALS ================== -->
+
+<!-- 1 -->
+<div class="modal fade" id="modal1" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">GA - Perizinan Berusaha Melalui OSS RBA</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Program ini membantu perusahaan dalam mengurus perizinan berusaha secara elektronik melalui OSS RBA, sesuai peraturan pemerintah terbaru.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="modal fade" id="modal2" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">GA - Penyusunan LKPM</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan konsultasi untuk membantu penyusunan Laporan Kegiatan Penanaman Modal (LKPM) sesuai dengan format BKPM dan peraturan yang berlaku.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="modal fade" id="modal3" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">GA - Perizinan Berusaha Untuk Menunjang Kegiatan Usaha (PB-UMKU)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan ini membantu pengurusan perizinan PB-UMKU secara tepat dan sesuai regulasi, guna mendukung kelancaran operasional usaha Anda.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="modal fade" id="modal4" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM - Konsultasi Efektivitas Seleksi dan Penempatan Tenaga Kerja</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Pendampingan dalam menilai dan mengoptimalkan proses seleksi serta penempatan tenaga kerja agar sesuai kompetensi dan kebutuhan organisasi.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="modal fade" id="modal5" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM - Konsultasi Perencanaan Karir dan Suksesi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Kami menyediakan strategi perencanaan karir dan suksesi yang efektif untuk memastikan keberlanjutan dan kesiapan talenta di organisasi Anda.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="modal fade" id="modal6" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM - Konsultasi Penyusunan Analisa Kebutuhan Training & Pengembangan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan ini membantu mengidentifikasi kebutuhan pelatihan dan pengembangan SDM yang tepat sasaran guna meningkatkan kompetensi dan produktivitas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="modal fade" id="modal7" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Penyusunan Struktur Upah dan Skala Upah (SUSU)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Kami membantu menyusun struktur upah dan skala upah yang adil dan sesuai regulasi agar sistem penggajian perusahaan Anda lebih transparan dan efisien.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="modal fade" id="modal8" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Job Analysis (Analisis Jabatan)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan konsultasi analisis jabatan untuk memastikan semua tugas, tanggung jawab, serta kompetensi setiap posisi dalam organisasi Anda terdokumentasi dengan baik.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="modal fade" id="modal9" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Pengembangan Organisasi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Kami mendampingi pengembangan struktur dan budaya organisasi agar lebih adaptif, efisien, dan siap menghadapi tantangan bisnis masa depan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10 -->
+<div class="modal fade" id="modal10" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Sistem Informasi SDM berbasis Teknologi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Solusi implementasi sistem informasi SDM (HRIS) berbasis teknologi untuk memudahkan pengelolaan data karyawan, absensi, serta pelaporan secara digital.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 11 -->
+<div class="modal fade" id="modal11" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Manajemen Kinerja Berbasis Kompetensi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Kami membantu merancang sistem manajemen kinerja yang berbasis kompetensi, untuk memaksimalkan potensi karyawan dan mendukung pencapaian tujuan organisasi.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 -->
+<div class="modal fade" id="modal12" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – KPI Berbasis Balance Score Card (BSC)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Pendampingan dalam menyusun KPI yang terintegrasi dengan Perspektif Balance Score Card (BSC), sehingga kinerja organisasi dapat diukur secara holistik.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 13 -->
+<div class="modal fade" id="modal13" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM &amp; GA – Penyelesaian Perselisihan Hubungan Industrial</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Konsultasi dan pendampingan profesional untuk menyelesaikan perselisihan hubungan industrial secara adil, sesuai dengan ketentuan hukum dan peraturan ketenagakerjaan yang berlaku.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 14 -->
+<div class="modal fade" id="modal14" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM &amp; GA – Pendampingan PHK Sesuai Regulasi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan pendampingan untuk memastikan proses Pemutusan Hubungan Kerja (PHK) berjalan sesuai dengan peraturan perundang-undangan, meminimalkan risiko hukum dan konflik industrial.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 15 -->
+<div class="modal fade" id="modal15" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM &amp; GA – LKS Bipartit, PP, dan PKB</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Kami menyediakan layanan penyusunan dan implementasi LKS Bipartit, Peraturan Perusahaan (PP), dan Perjanjian Kerja Bersama (PKB) guna membangun hubungan kerja yang harmonis dan produktif.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 16 -->
+<div class="modal fade" id="modal16" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SDM – Konsultansi Pengembangan SDM (Psikometri, Assessment, dsb)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Layanan pengembangan SDM secara menyeluruh melalui alat ukur psikometri, asesmen kompetensi, dan berbagai metode pengembangan individu maupun tim yang berbasis data.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ======= CTA Section (Card Style) ======= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="cta-text text-center text-md-start mb-3 mb-md-0">
+        <h2 class="cta-heading">Butuh solusi tepat untuk tantangan bisnis Anda?</h2>
+        <p class="cta-subheading">Jelajahi layanan konsultasi dan pelatihan kami yang dirancang khusus untuk kebutuhan organisasi Anda.</p>
+      </div>
+      <div class="cta-action text-center text-md-end">
+        <a href="contact.html" class="btn btn-cta">Hubungi Kami</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Kolom 1 -->
+      <div class="col-lg-4 col-md-6 footer-about mb-4">
+        <div class="d-flex align-items-center mb-2">
+          <img src="assets/img/logo prama nobg.png" alt="" style="height: 40px;">
+          <h5 class="ms-2">Prama Daksa Infotama</h5>
+        </div>
+        <p>Kami adalah konsultan terpercaya dalam pelatihan, legalitas usaha, dan pengembangan SDM berbasis regulasi yang mendukung pertumbuhan bisnis Anda.</p>
+      </div>
+
+      <!-- Kolom 2 (opsional bisa diisi atau dikosongkan) -->
+      <div class="col-lg-4 col-md-6 footer-middle mb-4">
+        <!-- Opsional: Tambah Google Maps kecil atau menu navigasi -->
+      </div>
+
+      <!-- Kolom 3 -->
+      <div class="col-lg-4 col-md-6 footer-contact mb-4">
+        <h5>Hubungi Kami</h5>
+        <p><strong>Alamat:</strong><br>
+          Gd. Wirausaha Lt.1, Unit 104<br>
+          Jl. HR Rasuna Said, Karet, Setiabudi,<br>
+          Jakarta Selatan, DKI Jakarta 12920</p>
+        <p><strong>Telepon:</strong> 0818-0800-2409</p>
+        <p><strong>Email:</strong> <a href="mailto:pramadaksainfotama@gmail.com">pramadaksainfotama@gmail.com</a></p>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <div class="text-center py-2 copyright">
+      &copy; 2025 <strong>Prama Daksa Infotama</strong>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/clients-carousel.js" defer></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector('#konsultasiCarousel');
+    const carouselInstance = new bootstrap.Carousel(carousel);
+    const dots = document.querySelectorAll('.dot-pagination .dot');
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        carouselInstance.to(index); // Pindah slide
+        updateActiveDot(index);
+      });
+    });
+
+    // Update dot aktif saat slide berubah
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+      updateActiveDot(event.to);
+    });
+
+    function updateActiveDot(index) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+  });
+</script>
+
+
+</body>
+</html>
